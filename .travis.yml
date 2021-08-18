@@ -7,4 +7,4 @@ before_install:
   - docker build -t jmendo19/docker-playground -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true  jmendo19/docker-playground npm run test -- --coverage
+  - docker run -e CI=true  jmendo19/docker-playground npm run test

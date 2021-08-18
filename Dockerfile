@@ -1,4 +1,3 @@
-
 # Start of the build phase
 FROM node:alpine as builder
 WORKDIR '/app'

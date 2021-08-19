@@ -13,7 +13,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-playground"
-  env: "Dockerplayground-env"
+  env: "Dockerplayground-env-1"
   bucket_name: "elasticbeanstalk-us-east-2-721917868751"
   bucket_path: "docker-playground"
   access_key_id: $AWS_ACCESS_KEY

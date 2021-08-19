@@ -16,7 +16,7 @@ deploy:
   env: "Dockerplayground-env"
   bucket_name: "elasticbeanstalk-us-east-2-721917868751"
   bucket_path: "docker-playground"
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   on:
     branch: main
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY

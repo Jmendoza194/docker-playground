@@ -1,3 +1,4 @@
+language: generic
 sudo: required
 services:
   - docker
@@ -7,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true  jmendo19/docker-playground npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-playground"
+  env: "Dockerplayground-env"
+  bucket_name: "elasticbeanstalk-us-east-2-721917868751"
+  bucket_path: "docker-playground"
+  on:
+    branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
